@@ -17,3 +17,16 @@ backend/app/__pycache__/
 backend/app/resources/__pycache__/
 backend/app/resources/Users/__pycache__/
 backend/app/resources/Common/__pycache__/
+
+client/.DS_Store
+client/dist
+
+# local env files
+client/.env.local
+client/.env.*.local
+
+# Log files
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+
