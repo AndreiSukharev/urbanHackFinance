@@ -4,7 +4,7 @@ version: '3.1'
 services:
 
   backend:
-    container_name: flask
+    container_name: urban_hack_flask
     build: ./backend
     restart: always
     ports:
@@ -16,8 +16,19 @@ services:
     env_file: .env
     entrypoint: ["python", "main.py"]
 
+  client:
+    container_name: urban_hack_client
+    build: ./client
+    volumes:
+      - './client:/usr/src/client'
+      - /usr/src/client/node_modules
+    ports:
+      - '8080:8080'
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
   db:
-    container_name: postgres
+    container_name: urban_hack_postgres
     image: postgres:latest
     restart: always
     env_file: .env
