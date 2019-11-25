@@ -37,8 +37,7 @@
   </div>
 </template>
 
-<style>
-</style>
+<style></style>
 
 <script>
 export default {
@@ -48,10 +47,10 @@ export default {
   mounted() {
     console.log(this.$session.exists());
     if (!this.$session.exists()) {
-      this.$router.push('/login');
+      this.$router.push("/login");
     } else {
-      this.$store.commit('setLogin', this.$session.get('login'));
-      this.$store.commit('setUserId', this.$session.get('userId'));
+      this.$store.commit("setLogin", this.$session.get("login"));
+      this.$store.commit("setUserId", this.$session.get("userId"));
     }
   },
   data: () => ({
