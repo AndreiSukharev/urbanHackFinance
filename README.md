@@ -26,12 +26,11 @@ https://docs.docker.com/compose/install/
 ## Build and Run
 
 ```
-git clone https://github.com/AndreiSukharev/diversity_hack.git diversity_hack
-cd diversity_hack
+git clone https://github.com/AndreiSukharev/urbanHackFinance.git urbanHackFinance
+
+cd urbanHackFinance
 docker-compose up --build
-cd client
-npm i
-npm run serve
+
 front: http://localhost:8080
 server: http://localhost:5000/ 
 ```
