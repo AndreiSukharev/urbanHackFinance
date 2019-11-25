@@ -1,10 +1,9 @@
-# diversity_hack
-Courier route optimization algorithm
-
+# Urban Hack
+Financial process visualization service
 
 [Server] Python (Flask)
 
-[Client] React
+[Client] Vue.js
 
 [Database] PostgreSQL
 
