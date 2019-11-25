@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const ApiClient = {};
-ApiClient.install = function(Vue, options) {
+ApiClient.install = function(Vue) {
   Vue.prototype.$apiClient = {
     createRequest(url, method = "GET", data = {}) {
       const config = {
