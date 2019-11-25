@@ -38,32 +38,21 @@
 </template>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
 
 <script>
 export default {
   props: {
     source: String
+  },
+  mounted() {
+    console.log(this.$session.exists());
+    if (!this.$session.exists()) {
+      this.$router.push('/login');
+    } else {
+      this.$store.commit('setLogin', this.$session.get('login'));
+      this.$store.commit('setUserId', this.$session.get('userId'));
+    }
   },
   data: () => ({
     drawer: null
