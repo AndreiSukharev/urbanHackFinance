@@ -11,10 +11,10 @@ class Users(Base):
         users = self.base_get_all(sql)
         return users
 
-    def post(self):
-        name = request.json['user_name']
-        record = (name,)
-        sql = '''INSERT INTO users (user_name)
-                 VALUES (%s);'''
-        res = self.base_write(sql, record)
-        return res
+    # def post(self):
+    #     name = request.json['user_name']
+    #     record = (name,)
+    #     sql = '''INSERT INTO users (user_name)
+    #              VALUES (%s);'''
+    #     res = self.base_write(sql, record)
+    #     return res

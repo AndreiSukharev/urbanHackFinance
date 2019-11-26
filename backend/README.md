@@ -15,7 +15,7 @@ POST     /api/signin
 Example for POST:
 ```
 {
-    "login": "test1",
+    "login": "admin",
     "password": "123Wertyq"
 }
  ```
@@ -23,9 +23,10 @@ Example for POST:
 Request:
  ```
 {
-    "login": "TestUser",
-    "role": "admin",
-    "id": 1
+    "message": "ok",
+    "login": "admin",
+    "id": 1,
+    "role": "admin"
 }
  ```
 

@@ -17,6 +17,8 @@ backend/app/__pycache__/
 backend/app/resources/__pycache__/
 backend/app/resources/Users/__pycache__/
 backend/app/resources/Common/__pycache__/
+backend/app/resources/Login/__pycache__/
+
 
 client/.DS_Store
 client/dist

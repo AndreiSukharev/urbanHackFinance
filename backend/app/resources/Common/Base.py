@@ -59,3 +59,10 @@ class Base(Resource):
         except Exception as e:
             print(e)
             return "error"
+
+    @staticmethod
+    def to_hash(request_password):
+        import hashlib
+        hash_object = hashlib.sha256(request_password.encode())
+        token = hash_object.hexdigest()
+        return token

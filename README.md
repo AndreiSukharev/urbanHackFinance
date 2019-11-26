@@ -32,19 +32,24 @@ cd urbanHackFinance
 docker-compose up --build
 
 front: http://localhost:8080
-server: http://localhost:5000/ 
+server: http://localhost:4440/ 
 ```
 
 #### Note Docker
 
+Create test users:
+
+```
+docker exec urban_hack_flask bash -c "python test_entity.py"
+```
 Run postgres client:
 
 ```
-docker exec -it postgres psql matchaDB user
+docker exec -it urban_hack_postgres psql hackDB user
 ```
 Enter in container:
 ```
-docker exec -it flask bash
+docker exec -it urban_hack_flask bash
 ```
 Remove all:
 ```
