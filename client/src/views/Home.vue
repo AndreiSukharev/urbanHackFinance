@@ -7,13 +7,19 @@
     </v-row>
     <v-row align-content="stretch" justify="center">
       <v-col cols="12" sm="8" md="3">
-        <card-with-bar-charts>Закрытие</card-with-bar-charts>
+        <card-with-bar-charts budget-stage="closing"
+          >Закрытие</card-with-bar-charts
+        >
       </v-col>
       <v-col cols="12" sm="8" md="3">
-        <card-with-bar-charts>Выполнение</card-with-bar-charts>
+        <card-with-bar-charts budget-stage="doing"
+          >Выполнение</card-with-bar-charts
+        >
       </v-col>
       <v-col cols="12" sm="8" md="3">
-        <card-with-bar-charts>Планирование</card-with-bar-charts>
+        <card-with-bar-charts budget-stage="planning"
+          >Планирование</card-with-bar-charts
+        >
       </v-col>
     </v-row>
   </v-container>

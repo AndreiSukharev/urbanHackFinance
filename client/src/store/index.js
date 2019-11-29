@@ -6,7 +6,12 @@ Vue.use(Vuex);
 const state = {
   login: "",
   password: "",
-  userId: 0
+  userId: 0,
+  budgetStages: {
+    closing: "Закрытие",
+    doing: "Выполнение",
+    planning: "Планирование"
+  }
 };
 
 const mutations = {
@@ -24,7 +29,8 @@ const mutations = {
 const getters = {
   getLogin: state => state.login,
   getPassword: state => state.password,
-  getUserId: state => state.userId
+  getUserId: state => state.userId,
+  getBudgetStage: state => stage => state.budgetStages[stage]
 };
 
 export default new Vuex.Store({

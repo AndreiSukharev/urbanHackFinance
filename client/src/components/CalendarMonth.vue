@@ -4,7 +4,7 @@
       <v-sheet height="64">
         <v-toolbar flat color="white">
           <v-btn outlined class="mr-4" @click="setToday">
-            Today
+            Сегодня
           </v-btn>
           <v-btn fab text small @click="prev">
             <v-icon small>mdi-chevron-left</v-icon>
@@ -23,13 +23,13 @@
             </template>
             <v-list>
               <v-list-item @click="type = 'day'">
-                <v-list-item-title>Day</v-list-item-title>
+                <v-list-item-title>День</v-list-item-title>
               </v-list-item>
               <v-list-item @click="type = 'week'">
-                <v-list-item-title>Week</v-list-item-title>
+                <v-list-item-title>Неделя</v-list-item-title>
               </v-list-item>
               <v-list-item @click="type = 'month'">
-                <v-list-item-title>Month</v-list-item-title>
+                <v-list-item-title>Месяц</v-list-item-title>
               </v-list-item>
             </v-list>
           </v-menu>
@@ -76,7 +76,7 @@
             </v-card-text>
             <v-card-actions>
               <v-btn text color="secondary" @click="selectedOpen = false">
-                Cancel
+                Отмена
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -94,9 +94,9 @@ export default {
     focus: new Date().toISOString().slice(0, 10),
     type: "month",
     typeToLabel: {
-      month: "Month",
-      week: "Week",
-      day: "Day"
+      month: "Месяц",
+      week: "Неделя",
+      day: "День"
     },
     start: null,
     end: null,
@@ -135,7 +135,6 @@ export default {
         case "month":
           return `${startMonth} ${startYear}`;
         case "week":
-        case "4day":
           return `${startMonth} ${startDay} ${startYear} - ${suffixMonth} ${endDay} ${suffixYear}`;
         case "day":
           return `${startMonth} ${startDay} ${startYear}`;

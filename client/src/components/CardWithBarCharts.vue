@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card :to="'/organizations/' + this.budgetStage">
     <v-card-title>
       <slot></slot>
     </v-card-title>
@@ -20,6 +20,7 @@ export default {
   components: {
     BarChart
   },
+  props: ["budgetStage"],
   data() {
     return {
       datacollection: {},
