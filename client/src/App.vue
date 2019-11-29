@@ -3,6 +3,19 @@
     <v-app id="inspire">
       <v-navigation-drawer v-model="drawer" app temporary>
         <v-list dense>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title class="title">
+                Application
+              </v-list-item-title>
+              <v-list-item-subtitle>
+                Москва
+              </v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+
+          <v-divider></v-divider>
+
           <v-list-item link to="/">
             <v-list-item-action>
               <v-icon>mdi-home</v-icon>
@@ -20,7 +33,8 @@
             </v-list-item-content>
           </v-list-item>
         </v-list>
-      </v-navigation-drawer>      <v-app-bar app color="primary" dark>
+      </v-navigation-drawer>
+      <v-app-bar app color="primary" dark>
         <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
         <v-toolbar-title>Application</v-toolbar-title>
       </v-app-bar>
@@ -35,7 +49,11 @@
   </div>
 </template>
 
-<style></style>
+<style>
+h1 {
+  margin: 16px auto;
+}
+</style>
 
 <script>
 export default {

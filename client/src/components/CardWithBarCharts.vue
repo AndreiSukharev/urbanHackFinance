@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {
-      datacollection: null,
+      datacollection: {},
       options: {
         scales: {
           xAxes: [

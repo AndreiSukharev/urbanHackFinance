@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row no-gutters justify="center">
-      <h1>Home</h1>
+      <h1 class="display-1">Календарь событий</h1>
     </v-row>
     <v-row justify="center">
       <v-col cols="12" sm="12" md="10">

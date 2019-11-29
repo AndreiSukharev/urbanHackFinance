@@ -27,8 +27,4 @@ export default {
 };
 </script>
 
-<style scoped>
-h1 {
-  margin: 16px auto;
-}
-</style>
+<style scoped></style>
